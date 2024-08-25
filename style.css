@@ -1,0 +1,690 @@
+@font-face {
+    font-family: RF Dewi Expanded;
+    src: url(RFDewiExpanded-Bold.woff2) format("woff2");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: RF Dewi;
+    src: url(RFDewi-Regular.woff2) format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: RF Dewi Light;
+    src: url(RFDewi-Light.woff2) format("woff2");
+    font-weight: 400;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+/*первый блок*/
+.first-block{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(block1.jpg);
+    width: 100vw;
+    height: 677px;
+    background-size: cover;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+/*1 и 11 блоки: шапка и футер*/
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-top: 30px;
+}
+
+.header__number,
+.header__email,
+.footer__number,
+.footer__email,
+.form__name,
+.form_tel  {
+    font-family: 'RF Dewi Expanded', 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    font-style: normal;
+    color: #ffffff;
+}
+
+.header__call-me,
+.header__adress,
+.footer__call-me,
+.footer__adress {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+}
+
+.header__factory-name,
+.footer__factory-name{
+    font-family: 'RF Dewi Expanded', 'Arial', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    font-style: normal;
+    color: #ffffff;
+    text-align: center;
+}
+
+.header__factory-desc,
+.footer__factory-desc{
+    font-family: 'RF Dewi Light', 'Arial', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+}
+
+/*первый блок: название и кнопка*/
+
+.first-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 194px;
+}
+
+.first-title__title > h1{
+    color:#ffffff;
+    font-size: 60px;
+    font-family: 'RF Dewi', 'Arial', sans-serif;
+}
+
+.first-title__button > a > button,
+.eleven-block__button > a > button,
+.form__button{
+    height: 64px;
+    width: 265px;
+    background-color: #F4DF74;
+    border-radius: 10px;
+    border-width: 0;
+
+}
+
+.first-title__button > a > button > span,
+.eleven-block__button > a > button > span,
+.form__button > span{
+    font-size: 16px;
+    font-family: 'RF Dewi', 'Arial', sans-serif;
+    font-weight: 800;
+}
+
+/*второй блок*/
+.second-block{
+    background-color: #ffffff;
+    width: 100vw;
+    height: 1167px;
+    position: absolute;
+    top:747px;
+    left:0;
+}
+
+/*2,4,5,7,8,10 блоки: название и описание*/
+.second-title,
+.fourth-title,
+.fifth-block__title,
+.seventh-title,
+.eight-title,
+.nine-title,
+.tenth-title,
+.form__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.second-title__title > h2,
+.fourth-title__title > h2,
+.fifth-block__title > h2,
+.seventh-title__title > h2,
+.eight-title__title > h2,
+.nine-title__title > h2,
+.tenth-title__title > h2,
+.form__title > h2 {
+    font-family: 'RF Dewi Expanded', 'Arial', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    width: 894px;
+}
+
+.second-title__desc,
+.fourth-title__desc,
+.seventh-title__desc,
+.eight-title__desc,
+.nine-title__desc,
+.tenth-title__desc { /*тк спан наследует стиль родителя, но сам не поддается выравниванию*/
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    width: 738px;
+}
+
+/*второй блок: товар и цены*/
+.items-table{
+    margin: 50px 40px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,398px);
+    gap: 35px;
+}
+
+.items-table__img-cont{
+    display: flex;
+    justify-content: center;
+}
+
+.items-table__img{
+    object-fit: cover;
+    margin-bottom: 17px;
+}
+
+.items-table__name h2,
+.item3__name h3{
+    font-family: 'RF Dewi', 'Arial', sans-serif;;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.items-table__price div{
+    margin-top: -15px;
+    margin-left: 10px;
+    font-family: 'RF Dewi', 'Arial', sans-serif;;
+    font-size: 18px;
+}
+
+/*третий блок с видео*/
+
+.third-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.third-block__video-cont{
+    position: absolute;
+    top:2070px;
+}
+
+.third-block__video{
+    object-fit: 100%;
+    width: 90vw;
+    height: 350px;
+    border-radius: 30px;
+}
+
+/*четвертый блок с видами производства*/
+
+.fourth-block{
+    background-color: #eeeeee;
+    width: 100vw;
+    height: 1211px;
+    position: absolute;
+    top:2245px;
+    left:0;
+}
+
+.fourth-title,
+.seventh-title{
+    margin-top: 305px;
+}
+
+.fourth-block__table{
+    display: grid;
+    gap: 35px;
+    grid-template-columns: repeat(3,350px);
+    grid-template-rows: repeat(1, 415px);
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.fourth-block__name-desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+}
+
+.fourth-block__name,
+.fifth-block__name{
+    font-family: 'RF Dewi', 'Arial', sans-serif;;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+
+.fourth-block__desc, 
+.fifth-block__desc,
+.item3__desc,
+.seventh-block__desc {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.fourth-block__img{
+    object-fit: cover;
+    height: 211px;
+    width: 350px;
+    border-radius: 6px;
+}
+
+/*пятый блок с вышивкой*/
+.fifth-block{
+    background-color: #ffffff;
+    position: absolute;
+    top: 3456px;
+    left:0;
+    width: 100vw;
+    height: 1106px;
+}
+
+.fifth-block__table{
+    display: grid;
+    grid-template-columns: repeat(2,545px);
+    grid-template-rows: repeat(1,500px);
+    gap: 37px;
+    justify-content: center;
+}
+
+.fifth-block__items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fifth-block__img{
+    object-fit: cover;
+    width: 545px;
+    height: 316px;
+    border-radius: 6px;
+}
+
+.fifth-block__title > h2{
+    margin-top: 100px;
+}
+
+/*шестой блок темный*/
+
+.sixth-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 4380px;
+}
+
+.sixth-block{
+    display: grid;
+    grid-template-columns: repeat(2,550px);
+    grid-template-rows: repeat(1,350px);
+}
+
+.sixth-block__item.item0{
+    background-color: black;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    height: 350px;
+    border-radius: 15px;
+}
+
+.sixth-block__item.item1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    position: relative;
+    z-index: 0;
+}
+
+.sixth-block__item.item2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    position: relative;
+    z-index: 0;
+}
+
+.sixth-block__item.item3{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+}
+
+.item1__img,
+.item2__img{
+    width: 550px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.item3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.item3__desc{
+    width: 750px;
+}
+
+.item3__name{
+    width: 632px;
+    text-align: center;
+}
+
+/*седьмой блок*/
+
+.seventh-block{
+    background-color: #191919;
+    width: 100vw;
+    height: 900px;
+    position: absolute;
+    top:4562px;
+    left: 0;
+}
+
+.seventh-title__title > h2,
+.seventh-title__desc{
+    color: #ffffff;
+}
+
+.seventh-block__table{
+    display: grid;
+    grid-template-columns: repeat(4,160px);
+    grid-template-rows: repeat(1,200px);
+    justify-content: center;
+    align-items: baseline;
+    gap:3x0px;
+    margin-top: 60px;
+}
+
+.seventh-block__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.seventh-block__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+    border-radius: 50%;
+    height: 114px;
+    width: 114px;
+}
+
+.seventh-block__desc{
+    margin-top: 35px;
+    color: #ffffff;
+}
+
+/*8 блок*/
+.eight-block{
+    background-color: #ffffff;
+    width: 100vw;
+    height: 964px;
+    position: absolute;
+    top:6070px;
+    left:0;
+}
+
+.eight-block__table{
+    display: grid;
+    grid-template-columns: repeat(3,350px);
+    grid-template-rows: repeat(2,350px);
+    flex: 1 350px;
+    gap: 35px;
+    margin-top: 80px;
+    justify-content: center;
+}
+
+.eight-block__item,
+.tenth-block__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eight-block__img,
+.tenth-block__img {
+    object-fit: cover;
+    height: 350px;
+    width: 350px;
+}
+
+/*10 блок*/
+
+.tenth-block{
+    background-color: #191919;
+    position: absolute;
+    top: 7577px;
+    left:0;
+    width: 100vw;
+    height: 2449px;
+}
+.tenth-block__table{
+    display: grid;
+    grid-template-columns: repeat(3,350px);
+    grid-template-rows: repeat(3,350px);
+    gap: 35px;
+    justify-content: center;
+}
+
+.tenth-title{
+    margin-top: 715px;
+    margin-bottom: 50px;
+    color: #ffffff;
+}
+
+/*9 блок*/
+.nine-section{
+    display: flex;
+    justify-content: center;
+    margin-top: 2676px;
+}
+
+.nine-block{
+    background-color: #e6e6e6;
+    position: relative;
+    width: 1124px;
+    height: 710px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nine-title__title{
+    margin-top: 80px;
+}
+
+.nine-block__table {
+    display: grid;
+    grid-template-columns: repeat(2,562px);
+    grid-template-rows: repeat(1,472px);
+    justify-content: end;
+    margin-top: 50px;
+}
+
+.nine-block__adress{
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+}
+
+.nine-block__adress.adress1,
+.nine-block__img.img1{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    align-self: flex-end;
+}
+
+.nine-block__adress.adress2,
+.nine-block__img.img2{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    align-self: flex-end;
+}
+
+.nine-block__img{
+    object-fit: cover;
+}
+
+.nine-block__adress.adress1,
+.nine-block__adress.adress2{
+    left:30px;
+    bottom: 30px;
+    font-family: 'RF Dewi Expanded', 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+/*11 блок: футер*/
+
+.eleven-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 9700px;
+    width: 100vw;
+}
+
+.eleven-block__line{
+    color: #2C2C2C;
+    width: 1125px;
+    size: 1px;
+}
+
+.footer {
+    width: 1125px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 30px;
+    margin-bottom: 48px;
+}
+
+.eleven-block__button > a > button{
+    margin-left: -15px;
+}
+
+/*доп секция с формой*/
+.form__input{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5460px;
+    left: 0;
+    width: 100vw;
+    background-color: #e6e6e6;
+}
+
+.form__input{
+    margin-top: 50px;
+}
+
+.form__button{
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+.form__name,
+.form_tel {
+    color: #000000;
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+#tel,
+#name{
+    height: calc(2.25rem + 2px);
+    width: 20vw;
+    border-radius: 10px;
+    border-color: #e6e6e6;
+}
+
+a:hover button,
+button:hover{
+    background-color:#fae99a;
+    border-width: 1px;
+    border-color: #F4DF74;
+}{
+    background-color:#fae99a;
+    border-width: 1px;
+    border-color: #F4DF74;
+}
+
+a:hover button span,
+button:hover span{
+    font-size: 18px;
+}
+
+.form_success{
+    visibility: hidden;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    margin-bottom: 50px;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+} 
+
+button:active{
+    background-color:#f9a227;   
+}
+
+button:active ~ .form_success{ 
+    visibility: visible;
+}
+
+.form__flex{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (width <= 1200px) {
+
+    /*1 block*/
+    .header__call-me-number,
+    .header__email-adress{
+        align-self: flex-end;
+    }   
+}
